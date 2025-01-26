@@ -15,7 +15,7 @@ This project aims to predict house prices based on various characteristics using
 
 ## Model Selection:
 - Evaluated the models on a validation set.
-- XGBoost outperformed Random Forest in terms of accuracy and was selected for deployment.
+- XGBoost outperformed Random Forest in terms of prediction error and was selected for deployment.
 
 ## Deployment:
 - Integrated the XGBoost model into a FastAPI web application.
