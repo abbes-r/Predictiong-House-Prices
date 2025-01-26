@@ -9,7 +9,7 @@ This project aims to predict house prices based on various characteristics using
 - Cleaned and transformed the dataset to ensure it is suitable for training.
 - Handled missing values, scaled numeric data, and encoded categorical features.
 
-##Model Training:
+## Model Training:
 - Trained two machine learning models: Random Forest Regressor & XGBoost Regressor.
 - Performed hyperparameter optimization for both models using Optuna, with cross-validation to validate results.
 
