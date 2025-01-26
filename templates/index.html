@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>
+    <i class="fas fa-home"></i> House Prices Predictor
+  </h1>
+  <br>
+   {{ prediction_text }}
+   <br>
+   <br>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="area" placeholder="House Area" required="required" />
+      <input type="text" name="bedrooms" placeholder="N° of Bedrooms" required="required" />
+      <input type="text" name="bathrooms" placeholder="N° of Bathrooms" required="required" />
+      <input type="text" name="stories" placeholder="N° of Stories" required="required" />
+      <input type="text" name="mainroad" placeholder="Mainroad? (Type 1 for YES and 0 for NO)" required="required" />
+      <input type="text" name="guestroom" placeholder="Guestroom? (Type 1 for YES and 0 for NO)" required="required" />
+      <input type="text" name="basement" placeholder="Basement? (Type 1 for YES and 0 for NO)" required="required" />
+      <input type="text" name="airconditioning" placeholder="Airconditioning? (Type 1 for YES and 0 for NO)" required="required" />
+      <input type="text" name="parking" placeholder="N° of Parking Spots" required="required" />
+      <input type="text" name="prefarea" placeholder="Prefarea? (Type 1 for YES and 0 for NO)" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+    <br>
+
+ </div>
+
+
+</body>
+</html>
